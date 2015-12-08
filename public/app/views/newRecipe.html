@@ -1,21 +1,21 @@
 <h1>New Nomz!</h1>
 
-<form ng-submit="createItem()">
+<form ng-submit="createRecipe()">
   <div class="form-group">
     <label for="title">Type</label>
     <input type="text" class="form-control" id="title" ng-model="item.type">
   </div>
   <div class="form-group">
     <label for="description">Name</label>
-    <textarea class="form-control" id="description" ng-model="item.name"></textarea>
+    <input type="text" class="form-control" id="description" ng-model="item.name"></textarea>
   </div>
     <div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" id="description" ng-model="recipe.description"></textarea>
+    <textarea class="form-control" id="description" ng-model="item.description"></textarea>
   </div>
   <div class="form-group">
     <label for="image">Image Link</label>
-    <input type="url" class="form-control" id="image" placeholder="" ng-model="recipe.img">
+    <input type="url" class="form-control" id="image" placeholder="" ng-model="item.img">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>

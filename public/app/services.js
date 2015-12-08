@@ -28,6 +28,7 @@ angular.module('HolidayServices', ['ngResource'])
 .factory("AuthInterceptor", ["Auth", function(Auth) {
 	return {
 		request: function(config) {
+			console.log("something");
 			var token = Auth.getToken();
 			if (token) {
 				config.headers.Authorization = "Bearer "+token;
