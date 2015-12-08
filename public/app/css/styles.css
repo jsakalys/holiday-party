@@ -1,0 +1,12 @@
+body {
+	background-image: url("http://www.wallpaperel.com/wp-content/uploads/2015/11/Christmas-Wallpaper-Beautiful-F16.jpg");
+	padding-top: 0px;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	background-size: cover;
+	color: black;
+	font-size: 14px;
+}
