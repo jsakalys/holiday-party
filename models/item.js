@@ -5,7 +5,7 @@ var ItemSchema = new mongoose.Schema({
 	name: String,
 	img: String,
 	permalink: String,
-	description: Text
+	description: String
 });
 
 module.exports = mongoose.model('Item', ItemSchema);
