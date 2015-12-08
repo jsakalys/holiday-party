@@ -10,7 +10,7 @@ var secret = "snowflakes";
 var mongoose = require('mongoose');
 var Item = require('./models/item');
 var User = require('./models/user');
-mongoose.connect('mongodb://localhost/holiday-party-items');
+mongoose.connect('mongodb://localhost/holiday-party');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -28,8 +28,7 @@ app.use(function (err, req, res, next) {
 
 app.use('/api/items', require('./controllers/items'));
 app.use('/api/users', require('./controllers/users'));
-app.use('/api/cookietest', require('./controllers/cookietest'));
-app.use('/api/drinktest', require('./controllers/drinktest'));
+app.use('/api/test', require('./controllers/cookietest'));
 
 app.post('/api/auth', function(req, res) {
  User.findOne({email: req.body.email}, function(err, user) {
