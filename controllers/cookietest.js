@@ -14,17 +14,19 @@ router.get("/", function(req, res) {
                 var recipe;
                 for (var i=0;i<recipes.length;i++) {
                     recipe = $(recipes[i]);
-                    var name = recipe.find(".gallery-slide-title").text();
-                    var permalink = recipe.find(".gallery-slide-cta").children().length;
+                    var name = recipe.find(".gallery-slide-image").attr("alt");
+                    var permalink = 'http://marthastewart.com' + recipe.find(".gallery-slide-cta a").attr("href");
                     var description = recipe.find(".gallery-slide-dek p").text();
                     var img = recipe.find(".gallery-slide-image").attr("src");
-                    Item.create({
-                        type: 'cookie',
-                        name: name,
-                        permalink: permalink,
-                        description: description,
-                        img: img
-                    });
+                    if (name && permalink && description && img) {
+                        Item.create({
+                            type: 'cookie',
+                            name: name,
+                            permalink: permalink,
+                            description: description,
+                            img: img
+                        });
+                    };
                 };
                 res.send({
                     type: 'cookie',
