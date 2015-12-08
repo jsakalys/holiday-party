@@ -2,7 +2,7 @@
 
 angular.module('HolidayServices', ['ngResource'])
 .factory('Recipe', ['$resource', 'Auth', function($resource, Auth) {
-  return $resource('http://localhost:3000/api/items/:id');
+  return $resource('/api/items/:id');
 }])
 //newfactory
 .factory("Auth", ["$window", function($window) {
