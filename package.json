@@ -1,0 +1,24 @@
+{
+  "name": "holiday-party",
+  "version": "1.0.0",
+  "description": "A handy holiday party API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsakalys/holiday-party.git"
+  },
+  "author": "The Snowflakes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsakalys/holiday-party/issues"
+  },
+  "homepage": "https://github.com/jsakalys/holiday-party#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.9"
+  }
+}
