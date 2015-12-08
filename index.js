@@ -8,17 +8,23 @@ var app = express();
 var secret = "snowflakes";
 
 var mongoose = require('mongoose');
+var uriUtil = require('mongodb-uri');
+var mongodbUri = process.env['MONGOLAB_URI'];
+var mongooseUri = uriUtil.formatMongoose(mongodbUri);
+mongoose.connect(mongooseUri || 'mongodb://localhost/holiday-party-items');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
 var Item = require('./models/item');
 var User = require('./models/user');
-mongoose.connect('mongodb://localhost/holiday-party-items');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/api/items', expressJWT({secret: secret}));
-// app.use('/api/users', expressJWT({secret: secret})
-// .unless({path: ['/api/users'], method: 'post'}));
+app.use('/api/items', expressJWT({secret: secret}));
+app.use('/api/users', expressJWT({secret: secret})
+.unless({path: ['/api/users'], method: 'post'}));
 
 app.use(function (err, req, res, next) {
  if (err.name === 'UnauthorizedError') {
