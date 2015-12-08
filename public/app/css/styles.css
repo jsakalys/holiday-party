@@ -64,6 +64,16 @@ h3 {
 	background-color: #99ccff;
 }
 
+.form {
+	width: 500px;
+	background-color: white;
+}
+
+.form-container {
+	margin: 0 auto;
+	width: 350px;
+}
+
 #fade {
     margin-top: 25px;
     font-size: 21px;
