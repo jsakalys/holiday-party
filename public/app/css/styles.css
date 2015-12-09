@@ -1,7 +1,7 @@
 body {
 	background-image: url("http://www.wallpaperel.com/wp-content/uploads/2015/11/Christmas-Wallpaper-Beautiful-F16.jpg");
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 22px;
+	font-size: 14px;
 	padding-top: 0px;
 	background-repeat: no-repeat;
   	background-attachment: fixed;
@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 }
@@ -30,12 +30,18 @@ h3 {
 	text-align: center;
 }
 
+a {
+	font-size: 18px;
+}
+
 .logomain {
 	height: 450px;
 }
 
 .container {
-		margin: 0 auto;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 15%;
 
 }
 
@@ -72,6 +78,11 @@ h3 {
 .form-container {
 	margin: 0 auto;
 	width: 350px;
+}
+
+#img {
+	display: block;
+	margin: 0 auto;
 }
 
 #fade {
