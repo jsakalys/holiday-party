@@ -28,9 +28,11 @@ angular.module('HolidayCtrls', ['HolidayServices'])
 }])
 .controller('NewCtrl', ['$scope', '$location', 'Recipe', function($scope, $location, Recipe) {
   $scope.recipe = {
-    title: '',
+    type: '',
+    name: '',
     description: '',
-    image: ''
+    permalink: '',
+    img: ''
   };
 
   $scope.createRecipe = function() {
