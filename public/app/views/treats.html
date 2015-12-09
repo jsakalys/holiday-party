@@ -2,15 +2,24 @@
 	<div><h3><img ng-src="app/img/holidaze.png" class="logomain" alt="Holiday Party"><br></h3></div>
 	<div class="text"><h3>Choose some treats and tasty drinks for your next holiday soiree!</h3></div>
 </div>
-<!-- 
-<div id="fade" class="flexbox-container">
+
+<!-- <div id="fade" class="flexbox-container">
 	<div><h3>Treats</h3></div>
-	<div><h3><img class="img-responsive" ng-src="{{recipe.image}}"><br>
+	<div><h3><img class="img-responsive" ng-src="{{item.image}}"><br>
 <br>
-<h3>{{item.name}} {{item.type}}</h3></div>
+<h3><li>{{item.name}} {{item.type}}</li></h3></div>
 </div>
 
 <div id="fade" class="flexbox-container">
 	<div><h3>Drinks</h3></div>
 	<div><h3>Treats</h3></div>
 </div> -->
+
+<div class="container" ng-controller="HomeCtrl">
+<div class="well" ng-repeat="recipe in recipes | filter:{name:search} track by recipe._id">
+  <a ng-href="{{recipe.permalink}}" target="_blank"><h1>{{recipe.name}}</h1></a><br>
+  <h4>{{recipe.description}}</h4>
+  <img id="img" class="img-responsive" ng-src="{{recipe.img}}">
+  <a ng-click="deleteRecipe(recipe._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
+</div>
+</div>

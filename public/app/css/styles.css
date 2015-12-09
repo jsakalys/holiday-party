@@ -35,7 +35,8 @@ h3 {
 }
 
 .container {
-		margin: 0 auto;
+	margin: 0 auto;
+	text-align: center;
 
 }
 
@@ -72,6 +73,11 @@ h3 {
 .form-container {
 	margin: 0 auto;
 	width: 350px;
+}
+
+#img {
+	display: block;
+	margin: 0 auto;
 }
 
 #fade {
